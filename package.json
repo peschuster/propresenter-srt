@@ -1,0 +1,10 @@
+{
+  "name": "propresenter-srt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Peter Schuster",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^7.2.3"
+  }
+}
