@@ -8,7 +8,7 @@ const config = {
     filename: process.argv[5] || new Date().toISOString().replace(/:|\./g, '')
 }
 
-const client = new WebSocket(`ws://${config.host}:${+config.port}/stagedisplay`);
+const client = new WebSocket(`ws://${config.host}:${config.port}/stagedisplay`);
 
 client.on('open', function open() {
     console.log(`Opened connection to: ${config.host}:${config.port}`);
