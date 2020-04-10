@@ -5,7 +5,7 @@ const config = {
     host: process.argv[2] || '10.198.9.112',
     port: process.argv[3] || 49476,
     password: process.argv[4] || '123456',
-    filename: process.argv[5] || ('' + new Date())
+    filename: process.argv[5] || new Date().toISOString().replace(/:|\./g, '')
 }
 
 const client = new WebSocket(`ws://${config.host}:${+config.port}/stagedisplay`);
