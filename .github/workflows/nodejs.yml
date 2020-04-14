@@ -25,7 +25,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm i -g yarn
-    - run: yarn run build --if-present
+    - run: |
+        yarn
+        yarn run build
       env:
         CI: true
     - uses: actions/upload-artifact@v1
