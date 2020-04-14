@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "clean": "rmdir /s /q bin & mkdir bin",
-    "build-win32": "yarn run clean && pkg -t node12-win index.js -o bin/ProPresenter-SRT.exe"
+    "clean": "rmdir /s /q bin & mkdir bin & mkdir bin\\win & mkdir bin\\macos",
+    "build-win32": "pkg -t node12-win index.js -o bin/win/ProPresenter-SRT.exe",
+    "build-macos": "pkg -t node12-macos index.js -o bin/macos/ProPresenter-SRT",
+    "build": "yarn run clean && yarn run build-win32 && yarn run build-macos"
   },
   "author": "Peter Schuster",
   "license": "MIT",
