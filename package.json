@@ -2,9 +2,16 @@
   "name": "propresenter-srt",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "clean": "rmdir /s /q bin & mkdir bin",
+    "build-win32": "yarn run clean && pkg -t node12-win index.js -o bin/ProPresenter-SRT.exe"
+  },
   "author": "Peter Schuster",
   "license": "MIT",
   "dependencies": {
     "ws": "^7.2.3"
+  },
+  "devDependencies": {
+    "pkg": "^4.4.0"
   }
 }
